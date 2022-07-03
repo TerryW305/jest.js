@@ -8,6 +8,7 @@ const fromEuroToDollar = function(valueInEuro){
 
 
 
+
 // this is my function that sums two numbers
 const sum = (a,b) => {
     return a + b
@@ -20,3 +21,14 @@ console.log(sum(7,3))
 module.exports = { sum };
 // we include fromEuroToDollar here as well because it needs to be exported
 module.exports = { sum, fromEuroToDollar }
+
+//fromDollarToYen
+const fromDollarToYen = function(valueInDollar){
+    let valueInYen = fromDollarToEuro(valueInDollar) * oneEurois.JPY;
+    return valueInYen;
+}
+//fromYenToPound
+const fromYenToPound = function(valueInYen){
+    let valueInBp = fromYenToEuro(valueInYen) * oneEurois.GBP;
+    return valueInBp;
+}
